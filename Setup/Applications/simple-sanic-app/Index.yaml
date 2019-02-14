@@ -1,0 +1,3 @@
+harnessApiVersion: '1.0'
+type: APPLICATION
+description: exposes port 8000
