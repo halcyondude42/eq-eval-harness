@@ -1,0 +1,6 @@
+harnessApiVersion: '1.0'
+type: GCR
+dockerImageName: eq-eval-harness/simple-sanic-app
+metadataOnly: true
+registryHostName: us.gcr.io
+serverName: gcp - eq-eval-harness project
