@@ -78,6 +78,31 @@ phases:
   provisionNodes: false
   serviceName: simple-sanic-app
   statefulSet: false
+- type: KUBERNETES
+  computeProviderName: gcp - eq-eval-harness project
+  daemonSet: false
+  infraMappingName: us-central1-a_standard-cluster-1 -GCP_Kubernetes--Google Cloud Platform- gcp - eq-eval-harness project- simple-sanic-app
+  name: Phase 2
+  phaseSteps:
+  - type: CONTAINER_DEPLOY
+    name: Deploy Containers
+    steps:
+    - type: KUBERNETES_DEPLOY
+      name: Upgrade Containers
+      properties:
+        commandName: Resize Replication Controller
+        instanceUnitType: PERCENTAGE
+        instanceCount: '50'
+    stepsInParallel: false
+  - type: VERIFY_SERVICE
+    name: Verify Service
+    stepsInParallel: false
+  - type: WRAP_UP
+    name: Wrap Up
+    stepsInParallel: false
+  provisionNodes: false
+  serviceName: simple-sanic-app
+  statefulSet: false
 rollbackPhases:
 - type: KUBERNETES
   computeProviderName: gcp - eq-eval-harness project
@@ -101,6 +126,32 @@ rollbackPhases:
     steps:
     - type: KUBERNETES_SETUP_ROLLBACK
       name: Rollback Kubernetes Setup
+    stepsInParallel: false
+  - type: VERIFY_SERVICE
+    name: Verify Service
+    phaseStepNameForRollback: Deploy Containers
+    statusForRollback: SUCCESS
+    stepsInParallel: false
+  - type: WRAP_UP
+    name: Wrap Up
+    stepsInParallel: false
+  provisionNodes: false
+  serviceName: simple-sanic-app
+  statefulSet: false
+- type: KUBERNETES
+  computeProviderName: gcp - eq-eval-harness project
+  daemonSet: false
+  infraMappingName: us-central1-a_standard-cluster-1 -GCP_Kubernetes--Google Cloud Platform- gcp - eq-eval-harness project- simple-sanic-app
+  name: Rollback Phase 2
+  phaseNameForRollback: Phase 2
+  phaseSteps:
+  - type: CONTAINER_DEPLOY
+    name: Deploy Containers
+    phaseStepNameForRollback: Deploy Containers
+    statusForRollback: SUCCESS
+    steps:
+    - type: KUBERNETES_DEPLOY_ROLLBACK
+      name: Rollback Containers
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
