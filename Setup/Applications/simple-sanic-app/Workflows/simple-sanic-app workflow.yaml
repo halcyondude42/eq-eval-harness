@@ -92,7 +92,7 @@ phases:
       properties:
         commandName: Resize Replication Controller
         instanceUnitType: PERCENTAGE
-        instanceCount: '50'
+        instanceCount: '100'
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
