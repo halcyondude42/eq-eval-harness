@@ -1,0 +1,15 @@
+harnessApiVersion: '1.0'
+type: GCP
+serviceAccountKeyFileContent: amazonkms:hNcW3A_fQ2mJHN0h7lN8zQ
+usageRestrictions:
+  appEnvRestrictions:
+  - appFilter:
+      filterType: ALL
+    envFilter:
+      filterTypes:
+      - NON_PROD
+  - appFilter:
+      filterType: ALL
+    envFilter:
+      filterTypes:
+      - PROD

@@ -1,0 +1,17 @@
+harnessApiVersion: '1.0'
+type: DOCKER
+password: amazonkms:jQTwqK90Tv-xYF5_FMggbg
+url: https://registry.hub.docker.com/v2/
+usageRestrictions:
+  appEnvRestrictions:
+  - appFilter:
+      filterType: ALL
+    envFilter:
+      filterTypes:
+      - NON_PROD
+  - appFilter:
+      filterType: ALL
+    envFilter:
+      filterTypes:
+      - PROD
+username: halcyondude
