@@ -15,6 +15,7 @@ notificationRules:
   notificationGroupAsExpression: false
   notificationGroups:
   - Account Administrator
+  userGroupAsExpression: false
 phases:
 - type: KUBERNETES
   computeProviderName: gcp - eq-eval-harness project
