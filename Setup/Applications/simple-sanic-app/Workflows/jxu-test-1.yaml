@@ -54,6 +54,12 @@ phases:
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Stage Service
+    steps:
+    - type: EMAIL
+      name: Email
+      properties:
+        subject: Harness Test Deploy
+        toAddress: jxu@everquote.com
     stepsInParallel: false
   - type: ROUTE_UPDATE
     name: Route Update
