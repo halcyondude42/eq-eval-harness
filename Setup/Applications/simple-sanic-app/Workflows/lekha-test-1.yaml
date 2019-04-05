@@ -49,8 +49,9 @@ phases:
       name: Upgrade Containers
       properties:
         downsizeInstanceUnitType: PERCENTAGE
+        commandName: Resize Replication Controller
         instanceUnitType: PERCENTAGE
-        instanceCount: 100
+        instanceCount: '10'
         downsizeInstanceCount: 100
     stepsInParallel: false
   - type: VERIFY_SERVICE
