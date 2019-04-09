@@ -72,6 +72,16 @@ phases:
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
+    steps:
+    - type: DATA_DOG
+      name: Datadog
+      properties:
+        analysisServerConfigId: hgxIDYykSyuKpn9cz61teQ
+        analysisTolerance: LOW
+        metrics: kubernetes.filesystem.usage
+        comparisonStrategy: COMPARE_WITH_PREVIOUS
+        executeWithPreviousSteps: false
+        timeDuration: '5'
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
