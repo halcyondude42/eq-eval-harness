@@ -78,7 +78,7 @@ phases:
       properties:
         analysisServerConfigId: hgxIDYykSyuKpn9cz61teQ
         analysisTolerance: LOW
-        metrics: evq.catwalk.model_latency.avg
+        metrics: docker.cpu.throttled
         comparisonStrategy: COMPARE_WITH_PREVIOUS
         executeWithPreviousSteps: false
         timeDuration: '5'
