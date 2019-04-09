@@ -3,7 +3,7 @@ type: KUBERNETES
 containerDefinition:
   commands:
   - ''
-  cpu: 1
+  cpu: 0
   logConfiguration: {}
   memory: 1024
   name: DEFAULT_NAME
