@@ -13,11 +13,6 @@ notificationRules:
   executionScope: WORKFLOW
   notificationGroupAsExpression: false
   userGroupAsExpression: false
-- conditions:
-  - SUCCESS
-  executionScope: WORKFLOW
-  notificationGroupAsExpression: false
-  userGroupAsExpression: false
 phases:
 - type: KUBERNETES
   computeProviderName: gcp - eq-eval-harness project
