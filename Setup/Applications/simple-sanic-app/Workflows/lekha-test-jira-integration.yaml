@@ -62,11 +62,11 @@ phases:
     - type: JIRA_CREATE_UPDATE
       name: Jira
       properties:
-        issueType: Non-Code Task
         summary: Harness deploy test v1 w/ jira integration
+        issueType: Non-Code Task
         sweepingOutputScope: WORKFLOW
-        jiraAction: CREATE_TICKET
         publishAsVar: true
+        jiraAction: CREATE_TICKET
         jiraConnectorId: jd0nN90RRY2F5uZz9RpPkQ
         project: SRE
         description: |
@@ -88,7 +88,6 @@ phases:
           workflow.lastGoodDeploymentDisplayName = ${workflow.lastGoodDeploymentDisplayName}
           workflow.lastGoodReleaseNo = ${workflow.lastGoodReleaseNo}
           workflow.startTs = ${workflow.startTs}
-        priority: ''
         sweepingOutputName: jira
         labels:
         - harness
