@@ -144,6 +144,18 @@ phases:
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
+    steps:
+    - type: JIRA_CREATE_UPDATE
+      name: Jira
+      properties:
+        issueId: ${jira.issueId}
+        jiraAction: UPDATE_TICKET
+        jiraConnectorId: jd0nN90RRY2F5uZz9RpPkQ
+        project: SRE
+        comment: Deploy complete.
+        labels:
+        - ''
+        status: Done
     stepsInParallel: false
   provisionNodes: false
   serviceName: simple-sanic-app
