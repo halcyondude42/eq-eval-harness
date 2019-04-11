@@ -117,6 +117,19 @@ phases:
         comparisonStrategy: COMPARE_WITH_PREVIOUS
         executeWithPreviousSteps: false
         timeDuration: '1'
+    - type: JIRA_CREATE_UPDATE
+      name: Jira
+      properties:
+        summary: ''
+        issueId: ${jira.issueId}
+        jiraAction: UPDATE_TICKET
+        publishAsVar: false
+        jiraConnectorId: jd0nN90RRY2F5uZz9RpPkQ
+        project: SRE
+        comment: Verification succeeded.
+        labels:
+        - ''
+        status: In Progress
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
