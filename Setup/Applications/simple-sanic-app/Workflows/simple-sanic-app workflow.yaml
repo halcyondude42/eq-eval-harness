@@ -87,7 +87,9 @@ phases:
           ${workflow.name}
           ${workflow.lastGoodDeploymentDisplayName}
           ${workflow.lastGoodReleaseNo}
+          ${workflow.startTs}
         priority: ''
+        sweepingOutputName: jira
         labels:
         - harness
         - automation
