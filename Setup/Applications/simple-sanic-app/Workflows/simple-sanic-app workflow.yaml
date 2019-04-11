@@ -69,17 +69,6 @@ phases:
         commandName: Resize Replication Controller
         instanceUnitType: PERCENTAGE
         instanceCount: '50'
-    - type: JIRA_CREATE_UPDATE
-      name: Jira
-      properties:
-        issueId: ${jira.issueId}
-        jiraAction: UPDATE_TICKET
-        jiraConnectorId: jd0nN90RRY2F5uZz9RpPkQ
-        project: SRE
-        comment: Deploying new infrastructure.
-        labels:
-        - ''
-        status: To Do
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
