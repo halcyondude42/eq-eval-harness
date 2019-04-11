@@ -76,18 +76,18 @@ phases:
           app.description = ${app.description}
           artifact.buildNo = ${artifact.buildNo}
           artifact.url = ${artifact.url}
-          ${deploymentUrl}
-          ${env.name}
-          ${env.description}
-          ${infra.kubernetes.namespace}
-          ${instance.hostName}
-          ${pipeline.name}
-          ${service.name}
-          ${service.description}
-          ${workflow.name}
-          ${workflow.lastGoodDeploymentDisplayName}
-          ${workflow.lastGoodReleaseNo}
-          ${workflow.startTs}
+          deploymentUrl = ${deploymentUrl}
+          env.name = ${env.name}
+          env.description = ${env.description}
+          infra.kubernetes.namespace = ${infra.kubernetes.namespace}
+          instance.hostName = ${instance.hostName}
+          pipeline.name = ${pipeline.name}
+          service.name = ${service.name}
+          service.description = ${service.description}
+          workflow.name = ${workflow.name}
+          workflow.lastGoodDeploymentDisplayName = ${workflow.lastGoodDeploymentDisplayName}
+          workflow.lastGoodReleaseNo = ${workflow.lastGoodReleaseNo}
+          workflow.startTs = ${workflow.startTs}
         priority: ''
         sweepingOutputName: jira
         labels:
