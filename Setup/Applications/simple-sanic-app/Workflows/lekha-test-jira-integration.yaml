@@ -59,39 +59,6 @@ phases:
         maxInstances: 2
         resizeStrategy: RESIZE_NEW_FIRST
         serviceSteadyStateTimeout: 10
-    - type: JIRA_CREATE_UPDATE
-      name: Jira
-      properties:
-        summary: Harness deploy test v1 w/ jira integration
-        issueType: Non-Code Task
-        sweepingOutputScope: WORKFLOW
-        publishAsVar: true
-        jiraAction: CREATE_TICKET
-        jiraConnectorId: jd0nN90RRY2F5uZz9RpPkQ
-        project: SRE
-        description: |
-          This is test v1 to see how the Jira integration works in Harness. I also want to test out all the variables that exist.
-
-          app.name = ${app.name}
-          app.description = ${app.description}
-          artifact.buildNo = ${artifact.buildNo}
-          artifact.url = ${artifact.url}
-          deploymentUrl = ${deploymentUrl}
-          env.name = ${env.name}
-          env.description = ${env.description}
-          infra.kubernetes.namespace = ${infra.kubernetes.namespace}
-          instance.hostName = ${instance.hostName}
-          pipeline.name = ${pipeline.name}
-          service.name = ${service.name}
-          service.description = ${service.description}
-          workflow.name = ${workflow.name}
-          workflow.lastGoodDeploymentDisplayName = ${workflow.lastGoodDeploymentDisplayName}
-          workflow.lastGoodReleaseNo = ${workflow.lastGoodReleaseNo}
-          workflow.startTs = ${workflow.startTs}
-        sweepingOutputName: jira
-        labels:
-        - harness
-        - automation
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
