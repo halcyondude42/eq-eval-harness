@@ -72,17 +72,6 @@ phases:
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
-    steps:
-    - type: DATA_DOG
-      name: Datadog
-      properties:
-        hostnameTemplate: warm-transfer-scheduler-staging-v1-58f754cbf4-4fhsq
-        analysisServerConfigId: hgxIDYykSyuKpn9cz61teQ
-        analysisTolerance: LOW
-        metrics: docker.cpu.throttled
-        comparisonStrategy: COMPARE_WITH_PREVIOUS
-        executeWithPreviousSteps: false
-        timeDuration: '1'
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
